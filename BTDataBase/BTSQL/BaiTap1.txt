@@ -1,0 +1,29 @@
+File bài tập PHP truy vấn SQL
+
+1. SELECT `ten_hang_sua`, `Dia_chi`, `Dien_Thoai` FROM `hang_sua` WHERE 1=1
+2. SELECT `ten_khach_hang`, `Dia_chi`, `Dien_Thoai` FROM `khach_hang` WHERE 1=1 ORDER by `ten_khach_hang`
+3. SELECT `ten_khach_hang`, `Phai`, `Dia_chi`, `Dien_thoai` FROM `khach_hang` WHERE 1=1 ORDER by `Phai` DESC
+4. SELECT `Ten_sua`, `Trong_luong`, `Don_gia` FROM `sua` ORDER by `Ten_sua` ASC, `Don_gia` DESC;
+5. SELECT `ten_sua`, `Trong_luong`, `Don_gia`, `tp_dinh_duong` FROM `sua` WHERE Ten_sua LIKE 's%'
+6. SELECT `Ma_hang_sua` ,`ten_hang_sua`, `dia_chi`, `dien_thoai` FROM hang_sua WHERE Ma_hang_sua LIKE '%M'
+7. SELECT * FROM sua WHERE Ten_sua LIKE '%grow%'
+8. SELECT `Ten_sua`, `Don_gia`, `Trong_luong` FROM sua WHERE `Don_gia` > 100000 ORDER by Ten_sua DESC
+9. SELECT `Ten_sua`, `TP_Dinh_Duong`, `Loi_ich` FROM sua WHERE Ma_sua LIKE 'sc%' OR Ma_sua LIKE 'Ab%' ORDER BY Ten_sua
+10. SELECT * FROM sua WHERE Trong_luong >= 900 OR Ma_hang_sua = 'DS'
+11. SELECT * FROM sua WHERE Don_gia BETWEEN 100000 AND 150000
+12. SELECT * FROM sua WHERE (Ma_hang_sua = 'DM' OR Ma_hang_sua = 'DL' OR Ma_hang_sua = 'DS') AND Trong_luong >= 800 ORDER by Trong_luong
+13. SELECT * FROM sua WHERE Ma_loai_sua = 'SD' OR Don_gia <= 12000
+14. SELECT * FROM khach_hang WHERE Ten_khach_hang LIKE 'N%' AND Phai = 1
+15. SELECT ten_hang_sua FROM hang_sua WHERE NOT ma_hang_sua LIKE '%m%'
+16. SELECT `Ten_sua`, TP_Dinh_Duong FROM sua WHERE TP_Dinh_Duong LIKE '%canxi%' OR TP_Dinh_Duong LIKE '%vitamin%'
+17. SELECT * FROM sua WHERE Trong_luong = 180 or Trong_luong = 200 or Trong_luong = 900;
+18. SELECT * FROM sua WHERE not Trong_luong = 400 AND not Trong_luong = 800 AND not Trong_luong = 900;
+19. SELECT Ten_sua, Trong_luong FROM sua ORDER BY Trong_luong DESC LIMIT 0, 10;
+20. 
+21. SELECT * FROM sua AS s LEFT JOIN hang_sua AS hs on s.Ma_hang_sua = hs.Ma_hang_sua WHERE hs.Ten_hang_sua LIKE 'Vinamilk' ORDER by Don_gia DESC
+22. SELECT * FROM sua as s JOIN hang_sua as hs ON s.Ma_hang_sua = hs.Ma_hang_sua WHERE hs.Ten_hang_sua like '%abbott%' ORDER by Trong_luong;
+
+Hàm và biểu thức có sẵn
+1. SELECT round(AVG(Tri_gia), -3) as `GT Trung Binh` FROM hoa_don 
+2. SELECT * FROM hoa_don WHERE month(ngay_hd) = 7 AND year(ngay_hd) = 2007
+3. 
