@@ -1,0 +1,42 @@
+class People{
+    public $Name;
+    public $Age;
+    public $address;
+
+    //Khai báo hằng
+    const ChaoNhau = Hello;
+
+
+
+    //Phuong thức khởi tạo 1
+    public function MyPeopleTalk(){
+        //truy suất thuộc tính
+        $this->Name = 'Nguyen Thanh Lanh';
+        $this->Age = 18;
+        $this->address = "Nha Trang - Khanh Hoa";
+    }
+    //Phương thức khởi tạo 2
+    public function __constructor(){
+        //truy suất thuộc tính
+        $this->Name = 'Nguyen Thanh Lanh';
+        $this->Age = 18;
+        $this->address = "Nha Trang - Khanh Hoa";
+    }
+
+    //Truy xuất hằng trong lớp, (ngoài lớp dùng tên class)
+    public function GapNguoiLa(){
+        echo "Mo tieng noi: " . self::ChaoNhau . "Nhe"!!
+    }
+
+
+    //Hàm hủy
+    public function __destruct(){
+        echo "Đối tượng đã bị hủy";
+    }
+
+}
+
+
+//Khởi tạo
+
+    $P1 = new People();
